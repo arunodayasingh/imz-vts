@@ -1,23 +1,31 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
+import React from 'react';
+import { useState } from 'react';
 import './App.css';
+import Sidebar from './components/sidebar/sidebar';
+import { BrowserRouter as Router , Routes,Route} from 'react-router-dom';
+import Login from './components/login/login';
+import Dashboard from './components/Dashboard/dashboard';
 
 function App() {
+
+  const [token,setToken] = useState();
+
+  // if(!token) {
+  //   return <Login setToken={setToken}/>
+  // }
+
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+
+        <Routes>
+          {/* <Route path="/" element={<Login/>} /> */}
+          <Route path="/dashboard"  element={<Dashboard/>}/>
+        </Routes>
+      
+      </Router>
     </div>
   );
 }
