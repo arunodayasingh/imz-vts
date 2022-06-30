@@ -9,8 +9,8 @@ const AppBaar = () => {
   return (
     <React.Fragment>
               
-      {/* <AppBar style={{background:"linear-gradient(90deg, rgba(83,63,208,1) 0%, rgba(130,18,183,1) 100%)"}}> */}
-      <AppBar style={{background:"transparent",color:"#000"}}>
+      <AppBar style={{background:"linear-gradient(90deg, rgba(83,63,208,1) 0%, rgba(130,18,183,1) 100%)",zIndex:-1}}>
+      {/* <AppBar style={{background:"transparent",color:"#000"}}> */}
         <Toolbar>
           <Grid container item xs={12}>
 
